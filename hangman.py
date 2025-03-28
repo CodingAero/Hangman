@@ -98,13 +98,7 @@ def hangman(secretWord):
     attempt = 8
     lettersGuessed = []
     while attempt > 0:
-        print("")
-        print("")
-        print("")
-        print("--------------------------------------------------")
-        print("")
-        print("")
-        print("")
+        print("\n\n\n--------------------------------------------------\n\n\n")
         print("You have", attempt, "guesses left.")
         print("")
         print("Available Letters: " + getAvailableLetters(lettersGuessed))
@@ -119,25 +113,13 @@ def hangman(secretWord):
                 print("Oops! That letter is not in my word: " + getGuessedWord(secretWord, lettersGuessed))
                 attempt += -1
             if isWordGuessed(secretWord, lettersGuessed):
-                print("")
-                print("")
-                print("")
-                print("--------------------------------------------------")
-                print("")
-                print("")
-                print("")
+                print("\n\n\n--------------------------------------------------\n\n\n")
                 print("Congratulations, you won!")
                 print("The word was " + secretWord + " as you discovered.")
                 return
         else:
             print("Oops! You've already guessed that letter: " + getGuessedWord(secretWord, lettersGuessed))
-    print("")
-    print("")
-    print("")
-    print("--------------------------------------------------")
-    print("")
-    print("")
-    print("")
+    print("\n\n\n--------------------------------------------------\n\n\n")
     print("Sorry, you ran out of guesses. The word was " + secretWord + ".")
 
 keepPlaying = True
@@ -145,13 +127,7 @@ playFeedback = 'y'
 while keepPlaying:
     secretWord = chooseWord(wordlist).lower()
     hangman(secretWord)
-    print("")
-    print("")
-    print("")
-    print("--------------------------------------------------")
-    print("")
-    print("")
-    print("")
+    print("\n\n\n--------------------------------------------------\n\n\n")
     playFeedback = str(input('Would you like to play again? (y/n): '))
     print("")
     if ((playFeedback != 'y') and (playFeedback != 'Y') and (playFeedback != 'yes') and (playFeedback != 'Yes')):
